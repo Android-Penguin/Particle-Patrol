@@ -92,6 +92,8 @@ body, html {
     height: 80vh;
 }
 #hero-content > img {
+    margin: 0 0 0 10%;
+    display: block;
     width: auto;
     max-width: 65%;
 }

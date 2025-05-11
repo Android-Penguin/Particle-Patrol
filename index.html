@@ -20,15 +20,15 @@
                 <img id="nav-logo" src="./PP_Mono_Portrait.png" alt="Particle Patrol Logo">
             </a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="#problem">Problem</a>
+            <a id="problem-link" href="#problem" class="nav-link">Problem</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="#solution">Solution</a>
+            <a id="solution-link" href="#solution" class="nav-link">Solution</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="#prototype">Prototype</a>
+            <a id="prototype-link" href="#prototype" class="nav-link">Prototype</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="#data">Data</a>
+            <a id="data-link" href="#data" class="nav-link">Data</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="#team">Team</a>
+            <a id="team-link" href="#team" class="nav-link">Team</a>
         </div>
         <div id="content-container">
             <!-- # Main content boxes -->
@@ -113,7 +113,7 @@
              <!-- TEAM -->
              <div id="team" class="content-box section-header">
                 <h1>TEAM</h1>
-                <p>We’re a team of final-year mechanical and mechatronics engineering students with strong skills in product development, electronics, design, and project management.
+                <p>We're a team of final-year mechanical and mechatronics engineering students with strong skills in product development, electronics, design, and project management.
                 </p>
              </div>
              <div class="connector-line">
@@ -145,5 +145,38 @@
              </div>
         </div>
     </div>
+
+    <!-- Script for bold nav -->
+     <script>
+        const sections = document.querySelectorAll('.section-header');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Get the corresponding nav link ID.  Assumes the section ID
+                    // matches the link ID prefix.
+                    const targetId = entry.target.id;
+                    const navLinkId = `${targetId}-link`;
+                    const currentNavLink = document.getElementById(navLinkId);
+
+                    // Remove 'active' from all nav links
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    // Add 'active' to the current nav link
+                    if (currentNavLink) {
+                        currentNavLink.classList.add('active');
+                    }
+                }
+            });
+        }, {
+            threshold: 0 // Adjust as needed
+        });
+
+        // Observe each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+     </script>
 </body>
 </html>
