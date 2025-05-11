@@ -22,23 +22,25 @@
             <img class="nav-line" src="./Nav_Line.svg" alt="">
             <a href="#problem">Problem</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="">Solution</a>
+            <a href="#solution">Solution</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="">Prototype</a>
+            <a href="#prototype">Prototype</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="">Data</a>
+            <a href="#data">Data</a>
             <img class="nav-line" src="./Nav_Line.svg" alt="">
-            <a href="">Team</a>
+            <a href="#team">Team</a>
         </div>
         <div id="content-container">
             <!-- # Main content boxes -->
              <div class="content-box" id="hero-content">
                 <img src="./PP_Bus.png" alt="Particle Patrol Bus Logo">
-                <span>A project investigating how Auckland's air quality varies in time and space</span>
+                <span>An investigation into the spatial variation of Auckland's air quality</span>
              </div>
              <div class="connector-line">
                 <img src="./Content_Line.svg" alt="">
              </div>
+
+             <!-- PROBLEM -->
              <div id="problem" class="content-box section-header">
                 <h1>PROBLEM</h1>
                 <p>New Zealand lacks a high-resolution air quality monitoring system. Existing fixed stations are too sparse to capture street-level pollution variations, making it hard for councils to identify and act on specific hotspots, and for individuals to make informed decisions about their environments, especially the 1 in 5 New Zealanders with respiratory conditions.
@@ -49,7 +51,97 @@
              </div>
              <div class="content-box">
                 <p class="italic">Interactive map showing Auckland's limited air quality monitoring stations.</p>
-                <iframe src="https://aqicn.org/map/auckland/" frameborder="0"></iframe>
+                <iframe src="https://aqicn.org/map/auckland/" scrolling="no" frameborder="0"></iframe>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+            
+             <!-- SOLUTION -->
+             <div id="solution" class="content-box section-header">
+                <h1>SOLUTION</h1>
+                <p>Our system addresses the lack of localised air quality data by mounting a network of low-cost sensors onto Auckland's bus fleet. This leverages bus routes to collect dynamic, street-level pollution data without the expense of installing new monitoring stations. 
+                </p>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+             <div class="content-box">
+                <p class="italic">GIS data of all Auckland bus routs demonstrating potential network coverage</p>
+                <iframe src="https://data-atgis.opendata.arcgis.com/datasets/ATgis::bus-route/explore" frameborder="0"></iframe>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+
+             <!-- PROTOTYPE -->
+             <div id="prototype" class="content-box section-header">
+                <h1>PROTOTYPE</h1>
+                <p>To validate the technical feasibility of our idea, we developed a car-mounted air quality monitor using an SDS011 sensor. A laptop connected over USB records timestamped measurements to a log file while a separate phone records timestamped GPS data to another log file.
+                </p>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+             <div class="content-box">
+                <p class="italic">Proof-of-concept prototype used in initial testing.</p>
+                <img src="./Prototype_Annotated.png" alt="Air quality sensor prototype">
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+
+             <!-- DATA -->
+             <div id="data" class="content-box section-header">
+                <h1>DATA</h1>
+                <p>Prototype was tested by driving around the city using roads shared by bus routes where possible. The air quality and GPS log files were then matched using MATLAB and displayed below with Plotly.
+                </p>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+             <div class="content-box">
+                <div id="data-container">
+                    <iframe src="./scatter_cbd.html" frameborder="0"></iframe>
+                    <iframe src="./heatmap_cbd.html" frameborder="0"></iframe>
+                </div>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+
+             <!-- TEAM -->
+             <div id="team" class="content-box section-header">
+                <h1>TEAM</h1>
+                <p>We’re a team of final-year mechanical and mechatronics engineering students with strong skills in product development, electronics, design, and project management.
+                </p>
+             </div>
+             <div class="connector-line">
+                <img src="./Content_Line.svg" alt="">
+             </div>
+             <div class="content-box">
+                <div id="team-grid">
+                    <img src="./Coco.png" alt="">
+                    <div>
+                        <h2>Coco</h2>
+                        <p>Coco has experience as a digital intern and in academic research, bringing expertise in software integration and circuit design.</p>
+                    </div>
+                    <img src="./Shaun.png" alt="">
+                    <div>
+                        <h2>Shaun</h2>
+                        <p>Shaun has worked in R&D and systems engineering, with strengths in electrical systems and hands-on prototyping, and serves as our R&D Lead.</p>
+                    </div>
+                    <img src="./Camilla.png" alt="">
+                    <div>
+                        <h2>Camilla</h2>
+                        <p>Camilla leads mechanical design, with industry experience in CAD, simulation, and manufacturing.</p>
+                    </div>
+                    <img src="./Akshima.png" alt="">
+                    <div>
+                        <h2>Akshima</h2>
+                        <p>Akshima brings expertise from internships and student leadership roles in project management, finance, and stakeholder coordination, managing the project's timeline and business case.</p>
+                    </div>
+                </div>
              </div>
         </div>
     </div>
